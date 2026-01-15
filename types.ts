@@ -6,6 +6,7 @@ export interface Product {
   category: 'Science' | 'Education' | 'Hybrid';
   image: string;
   features: string[];
+  link?: string;
 }
 
 export interface BlogPost {

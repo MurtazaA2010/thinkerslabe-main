@@ -11,35 +11,12 @@ export const NAV_ITEMS: NavItem[] = [
 export const PRODUCTS: Product[] = [
   {
     id: '1',
-    name: 'QuantumExplorer',
-    description: 'An AI-powered physics simulator that lets you visualize subatomic particles and complex wave functions right from your browser.',
-    category: 'Science',
+    name: 'Phi AI',
+    description: 'An AI powered tool to generate STEM animations',
+    category: 'Education',
     image: 'https://picsum.photos/seed/physics/800/600',
-    features: ['Real-time Particle Simulation', 'Interactive Wave Mechanics', 'VR/AR Ready'],
-  },
-  {
-    id: '2',
-    name: 'BioSynth Lab',
-    description: 'Explore the blueprint of life. BioSynth uses deep learning to help you understand DNA sequencing and cellular biology through gamified modules.',
-    category: 'Science',
-    image: 'https://picsum.photos/seed/biology/800/600',
-    features: ['DNA Sequence Editor', 'Cell Growth Modeling', 'Anatomy Explorer'],
-  },
-  {
-    id: '3',
-    name: 'ScribeGenius',
-    description: 'The ultimate educational companion. It analyzes your learning style and creates personalized study guides for any subject in seconds.',
-    category: 'Education',
-    image: 'https://picsum.photos/seed/edu/800/600',
-    features: ['Adaptive Learning Paths', 'Smart Note-taking', 'Instant Summaries'],
-  },
-  {
-    id: '4',
-    name: 'CosmoJourney',
-    description: 'A pocket planetarium that uses AI to map the stars in real-time, teaching users about astrophysics and planetary movements.',
-    category: 'Education',
-    image: 'https://picsum.photos/seed/space/800/600',
-    features: ['AR Star Mapping', 'Black Hole Physics', 'Historical Star Maps'],
+    features: ['Prompt to Animation', 'Mathematical Equations', 'Mathematical Formulas'],
+    link: "http://youtube.com"
   }
 ];
 

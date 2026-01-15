@@ -10,12 +10,7 @@ const Navbar: React.FC = () => {
     <nav className="fixed top-0 left-0 right-0 z-50 glass-card mx-4 my-4 rounded-2xl">
       <div className="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between">
         <Link to="/" className="flex items-center space-x-2">
-          <div className="w-8 h-8 bg-gradient-to-br from-blue-500 to-purple-600 rounded-lg flex items-center justify-center shadow-lg shadow-blue-500/20">
-            <span className="font-bold text-white text-xl">T</span>
-          </div>
-          <span className="text-xl font-bold tracking-tight text-white font-display">
-            Thinkers<span className="text-blue-400">Labe</span>
-          </span>
+          <img src="../public/logo-main.png" alt="ThinkersLabe" width={250} height={150}/>
         </Link>
 
         <div className="hidden md:flex items-center space-x-8">
