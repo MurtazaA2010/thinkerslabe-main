@@ -28,7 +28,7 @@ const Products: React.FC = () => {
               <img
                 src={product.image}
                 alt={product.name}
-                className="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
+                className="w-full h-full object-cover hover:scale-105 transition-transform duration-500" width ={300} height={200}
               />
               <span className="absolute top-4 left-4 px-3 py-1 bg-blue-600/90 backdrop-blur-md text-white text-xs font-bold rounded-full">
                 {product.category}

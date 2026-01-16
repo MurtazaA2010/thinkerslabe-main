@@ -14,7 +14,7 @@ export const PRODUCTS: Product[] = [
     name: 'Phi AI',
     description: 'An AI powered tool to generate STEM animations',
     category: 'Education',
-    image: 'https://picsum.photos/seed/physics/800/600',
+    image: 'phiai.png',
     features: ['Prompt to Animation', 'Mathematical Equations', 'Mathematical Formulas'],
     link: "http://youtube.com"
   }

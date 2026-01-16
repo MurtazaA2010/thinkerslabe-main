@@ -1,13 +1,45 @@
 
-import React, { useState } from 'react';
+import React, { useState, useRef } from 'react';
+import emailjs from "@emailjs/browser"
 
 const Contact: React.FC = () => {
   const [submitted, setSubmitted] = useState(false);
-
+  const [error, setError] = useState('');
+  const [loading, setLoading] = useState(false);
+  const form = useRef<HTMLFormElement>(null);
+  const [name, setName] = useState('');
+  const [email, setEmail] = useState('');
+  const [subject, setSubject] = useState('');
+  const [message, setMessage] = useState('');
+const isDisabled =
+  loading ||
+  !name.trim() ||
+  !email.trim() ||
+  !message.trim();
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    setSubmitted(true);
-    setTimeout(() => setSubmitted(false), 5000);
+    setLoading(true);
+    setError('');
+
+
+    const SERVICE_ID = 'thinkerslabe_emails';
+    const TEMPLATE_ID = 'thinkerslabe9539259395';
+    const PUBLIC_KEY = 'eZfyDVkXR1CYMc6qo';
+
+    if (form.current) {
+      emailjs.sendForm(SERVICE_ID, TEMPLATE_ID, form.current, PUBLIC_KEY)
+        .then((result) => {
+          console.log(result.text);
+          setSubmitted(true);
+          setLoading(false);
+          // Reset form after a delay or immediately
+          if (form.current) form.current.reset();
+        }, (error) => {
+          console.log(error.text);
+          setError('Failed to send message. Please try again later.');
+          setLoading(false);
+        });
+    }
   };
 
   return (
@@ -29,14 +61,14 @@ const Contact: React.FC = () => {
                 <p className="text-gray-400">hello@thinkerslabe.ai</p>
               </div>
             </div>
-            
+
             <div className="flex items-start">
               <div className="w-12 h-12 bg-purple-500/10 text-purple-400 rounded-xl flex items-center justify-center mr-6 shrink-0">
                 <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" /><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" /></svg>
               </div>
               <div>
-                <h4 className="text-white font-bold mb-1">Our Lab</h4>
-                <p className="text-gray-400">Silicon Alley, NY 10010<br />United States</p>
+                <h4 className="text-white font-bold mb-1">Our HQ</h4>
+                <p className="text-gray-400">Dhaka<br />Bangladesh</p>
               </div>
             </div>
           </div>
@@ -50,35 +82,86 @@ const Contact: React.FC = () => {
               </div>
               <h2 className="text-2xl font-bold mb-2">Message Sent!</h2>
               <p className="text-gray-400">We'll get back to your curious mind shortly.</p>
+              <button
+                onClick={() => setSubmitted(false)}
+                className="mt-6 px-6 py-2 bg-white/10 hover:bg-white/20 text-white font-semibold rounded-lg transition-all"
+              >
+                Send Another
+              </button>
             </div>
           ) : (
-            <form onSubmit={handleSubmit} className="space-y-6">
+            <form ref={form} onSubmit={handleSubmit} className="space-y-6">
+              {error && (
+                <div className="bg-red-500/10 border border-red-500/20 text-red-500 px-4 py-3 rounded-xl text-sm">
+                  {error}
+                </div>
+              )}
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                 <div>
-                  <label className="block text-xs font-bold text-gray-500 uppercase tracking-widest mb-2">Full Name</label>
-                  <input required type="text" className="w-full bg-white/5 border border-white/10 rounded-xl px-5 py-4 text-white focus:outline-none focus:border-blue-500" placeholder="Jane Doe" />
+                  <label className="block text-xs font-bold text-gray-500 uppercase tracking-widest mb-2" >Full Name</label>
+                  <input
+                    required
+                    name="user_name"
+                    type="text"
+                    value={name}
+                    onChange={(e) => setName(e.target.value)}
+                    className="w-full bg-white/5 border border-white/10 rounded-xl px-5 py-4 text-white focus:outline-none focus:border-blue-500"
+                    placeholder="Jane Doe"
+                  />
                 </div>
                 <div>
-                  <label className="block text-xs font-bold text-gray-500 uppercase tracking-widest mb-2">Email</label>
-                  <input required type="email" className="w-full bg-white/5 border border-white/10 rounded-xl px-5 py-4 text-white focus:outline-none focus:border-blue-500" placeholder="jane@example.com" />
+                  <label className="block text-xs font-bold text-gray-500 uppercase tracking-widest mb-2" required onChange = {(e) => setEmail(e.target.value)}>Email</label>
+                  <input
+                    required
+                    name="user_email"
+                    type="email"
+                    value={email}
+                    onChange={(e) => setEmail(e.target.value)}
+                    className="w-full bg-white/5 border border-white/10 rounded-xl px-5 py-4 text-white focus:outline-none focus:border-blue-500"
+                    placeholder="jane@example.com"
+                  />
                 </div>
               </div>
               <div>
-                <label className="block text-xs font-bold text-gray-500 uppercase tracking-widest mb-2">Subject</label>
-                <select className="w-full bg-white/5 border border-white/10 rounded-xl px-5 py-4 text-white focus:outline-none focus:border-blue-500 appearance-none">
-                  <option className="bg-gray-900">General Inquiry</option>
-                  <option className="bg-gray-900">Product Support</option>
-                  <option className="bg-gray-900">Partnership Idea</option>
-                  <option className="bg-gray-900">Careers</option>
+                <label className="block text-xs font-bold text-gray-500 uppercase tracking-widest mb-2" required onChange = {(e) => setSubject(e.target.value)}>Subject</label>
+                <select
+                name="subject"
+                value={subject}
+                onChange={(e) => setSubject(e.target.value)}
+                className="w-full bg-white/5 border border-white/10 rounded-xl px-5 py-4 text-white focus:outline-none focus:border-blue-500 appearance-none"
+              >
+                  <option className="bg-gray-900" value="General Inquiry">General Inquiry</option>
+                  <option className="bg-gray-900" value="Product Support">Product Support</option>
+                  <option className="bg-gray-900" value="Partnership Idea">Partnership Idea</option>
+                  <option className="bg-gray-900" value="Careers">Careers</option>
                 </select>
               </div>
               <div>
-                <label className="block text-xs font-bold text-gray-500 uppercase tracking-widest mb-2">Message</label>
-                <textarea required rows={4} className="w-full bg-white/5 border border-white/10 rounded-xl px-5 py-4 text-white focus:outline-none focus:border-blue-500 resize-none" placeholder="How can we help you learn today?"></textarea>
+                <label className="block text-xs font-bold text-gray-500 uppercase tracking-widest mb-2" required onChange = {(e) => setMessage(e.target.value)}>Message</label>
+                <textarea
+                  required
+                  name="message"
+                  rows={4}
+                  value={message}
+                  onChange={(e) => setMessage(e.target.value)}
+                  className="w-full bg-white/5 border border-white/10 rounded-xl px-5 py-4 text-white focus:outline-none focus:border-blue-500 resize-none"
+                  placeholder="How can we help you learn today?"
+                ></textarea>
               </div>
-              <button type="submit" className="w-full py-4 bg-blue-600 hover:bg-blue-700 text-white font-bold rounded-xl transition-all shadow-lg shadow-blue-600/30">
-                Send Message
-              </button>
+              <button
+                  disabled={isDisabled}
+                  type="submit"
+                  className="w-full py-4 bg-blue-600 hover:bg-blue-700 disabled:opacity-50 disabled:cursor-not-allowed text-white font-bold rounded-xl transition-all shadow-lg shadow-blue-600/30 flex items-center justify-center"
+                >
+                  {loading ? "Sending...   " : "Send Message"}
+                  {loading ? (
+                  <svg className="animate-spin -ml-1 mr-3 h-5 w-5 text-white pl-2" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                    <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4" ></circle>
+                    <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+                  </svg>
+                ) : null}     
+                </button>
+                         
             </form>
           )}
         </div>

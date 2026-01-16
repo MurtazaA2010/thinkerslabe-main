@@ -19,12 +19,9 @@ const Footer: React.FC = () => {
         </div>
 
         <div>
-          <h4 className="text-white font-bold mb-6">Explore</h4>
+          <h4 className="text-white font-bold mb-6">Products</h4>
           <ul className="space-y-4 text-sm text-gray-400">
-            <li><Link to="/products" className="hover:text-blue-400 transition-colors">AI Science Tools</Link></li>
-            <li><Link to="/products" className="hover:text-blue-400 transition-colors">Educational Platforms</Link></li>
-            <li><Link to="/blogs" className="hover:text-blue-400 transition-colors">Our Research</Link></li>
-            <li><Link to="/blogs" className="hover:text-blue-400 transition-colors">Learning Hub</Link></li>
+            <li><Link to="/products" className="hover:text-blue-400 transition-colors">Phi AI</Link></li>
           </ul>
         </div>
 
