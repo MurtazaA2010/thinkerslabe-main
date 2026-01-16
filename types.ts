@@ -17,6 +17,7 @@ export interface BlogPost {
   date: string;
   category: string;
   image: string;
+  content: string;
 }
 
 export interface NavItem {

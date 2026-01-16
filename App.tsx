@@ -7,6 +7,9 @@ import Home from './pages/Home';
 import Products from './pages/Products';
 import Blogs from './pages/Blogs';
 import Contact from './pages/Contact';
+import PrivacyPolicy from './pages/PrivacyPolicy';
+import TermsOfServices from './pages/TermsOfServices';
+import BlogDetails from './pages/BlogDetails';
 
 const App: React.FC = () => {
   return (
@@ -18,7 +21,10 @@ const App: React.FC = () => {
             <Route path="/" element={<Home />} />
             <Route path="/products" element={<Products />} />
             <Route path="/blogs" element={<Blogs />} />
+            <Route path="/blogs/:id" element={<BlogDetails />} />
             <Route path="/contact" element={<Contact />} />
+            <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+            <Route path="/terms-of-services" element={<TermsOfServices />} />
           </Routes>
         </main>
         <Footer />
