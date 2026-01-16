@@ -1,7 +1,8 @@
 
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-
+import { PRODUCTS } from '../constants';
+import Products from './Products';
 const Home: React.FC = () => {
   const [query, setQuery] = useState('');
   const [response, setResponse] = useState('');
@@ -35,6 +36,42 @@ ThinkersLabe create AI-powered products that help educators, students, creators,
             <Link to="/blogs" className="w-full sm:w-auto px-8 py-4 bg-white/5 hover:bg-white/10 text-white border border-white/10 font-bold rounded-xl transition-all">
               Read Our Stories
             </Link>
+          </div>
+        </div>
+
+        {/* products*/}
+      </section>
+      {/* Products Section */}
+      <section className="py-20 px-6 bg-white/[0.02]">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-bold mb-4">Our Products</h2>
+            <p className="text-gray-400">AI products for creative minds</p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {PRODUCTS.map((product) => (
+              <div
+                key={product.id}
+                className="p-8 glass-card rounded-3xl"
+              >
+                <div className="w-12 h-12 bg-blue-500/20 text-blue-400 rounded-xl flex items-center justify-center mb-6">
+                  <img src={product.image} alt={product.name} />
+                </div>
+
+                <h3 className="text-xl font-bold mb-4">
+                  {product.name}
+                </h3>
+
+                <p className="text-gray-400 leading-relaxed">
+                  {product.description}
+                </p>
+                <div className="w-full h-[1px] bg-gray-500 mt-4 mb-4"></div>
+                <Link to={`/products/${product.id}`} className="text-white hover:text-white/700 hover:opacity-80 ">
+                  Try It Free
+                </Link>
+              </div>
+            ))}
           </div>
         </div>
       </section>
