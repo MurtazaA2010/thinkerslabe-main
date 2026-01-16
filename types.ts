@@ -20,6 +20,19 @@ export interface BlogPost {
   content: string;
 }
 
+export interface Member {
+  id: string;
+  name: string;
+  role: string;
+  bio: string;
+  image: string;
+  socials: {
+    linkedin?: string;
+    twitter?: string;
+    github?: string;
+  };
+}
+
 export interface NavItem {
   label: string;
   path: string;
