@@ -13,13 +13,13 @@ const About: React.FC = () => {
             <div className="max-w-7xl mx-auto px-6 py-12">
                 {/* Story Section */}
                 <section className="mb-32 text-center max-w-4xl mx-auto">
-                    <h1 className="text-4xl md:text-6xl font-bold mb-8 tracking-tight text-white">
+                    <h1 className="text-4xl md:text-6xl font-bold mb-8 tracking-tight text-gray-900 dark:text-white">
                         Our <span className="text-gradient">Mission</span>
                     </h1>
-                    <p className="text-xl md:text-2xl text-gray-300 leading-relaxed mb-12">
-                        ThinkersLabe began with a simple question: <span className="text-white font-semibold">"What if AI could dream alongside us?"</span>
+                    <p className="text-xl md:text-2xl text-gray-700 dark:text-gray-300 leading-relaxed mb-12">
+                        ThinkersLabe began with a simple question: <span className="text-gray-900 dark:text-white font-semibold">"What if AI could dream alongside us?"</span>
                     </p>
-                    <div className="glass-card rounded-3xl p-8 md:p-12 text-left text-gray-400 leading-relaxed space-y-6">
+                    <div className="glass-card rounded-3xl p-8 md:p-12 text-left text-gray-600 dark:text-gray-400 leading-relaxed space-y-6">
                         <p>
                             In a world rapidly transforming through automation, we saw a gap in how technology interacts with human curiosity.
                             Education and scientific discovery were becoming data-driven but losing their sense of wonder. We set out to build tools
@@ -37,27 +37,27 @@ const About: React.FC = () => {
                 {/* Team Section */}
                 <section>
                     <div className="text-center mb-16">
-                        <h2 className="text-3xl md:text-5xl font-bold mb-6 text-white">Meet the <span className="text-gradient">Innovators</span></h2>
-                        <p className="text-gray-400 max-w-2xl mx-auto">
+                        <h2 className="text-3xl md:text-5xl font-bold mb-6 text-gray-900 dark:text-white">Meet the <span className="text-gradient">Innovators</span></h2>
+                        <p className="text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
                             The diverse minds behind our intelligent tools. We are united by a passion for science and a commitment to ethical AI.
                         </p>
                     </div>
 
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                         {MEMBERS.map((member) => (
-                            <div key={member.id} className="glass-card p-8 rounded-3xl flex flex-col items-center text-center group hover:bg-white/10 transition-colors">
-                                <div className="w-32 h-32 mb-6 rounded-full overflow-hidden border-4 border-blue-500/20 group-hover:border-blue-500/50 transition-colors">
+                            <div key={member.id} className="glass-card p-8 rounded-3xl flex flex-col items-center text-center group hover:bg-gray-100 dark:hover:bg-white/10 transition-colors">
+                                <div className="w-32 h-32 mb-6 rounded-full overflow-hidden border-4 border-blue-200 dark:border-blue-500/20 group-hover:border-blue-500/50 transition-colors">
                                     <img
                                         src={member.image}
                                         alt={member.name}
                                         className="w-full h-full object-cover"
                                     />
                                 </div>
-                                <h3 className="text-2xl font-bold text-white mb-2">{member.name}</h3>
-                                <span className="inline-block px-3 py-1 bg-blue-500/10 text-blue-400 text-xs font-bold uppercase tracking-wider rounded-full mb-4">
+                                <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-2">{member.name}</h3>
+                                <span className="inline-block px-3 py-1 bg-blue-100 dark:bg-blue-500/10 text-blue-600 dark:text-blue-400 text-xs font-bold uppercase tracking-wider rounded-full mb-4">
                                     {member.role}
                                 </span>
-                                <p className="text-gray-400 text-sm mb-6 leading-relaxed">
+                                <p className="text-gray-600 dark:text-gray-400 text-sm mb-6 leading-relaxed">
                                     {member.bio}
                                 </p>
 
@@ -67,7 +67,7 @@ const About: React.FC = () => {
                                             <a
                                                 key={platform}
                                                 href={link}
-                                                className="text-gray-500 hover:text-white transition-colors"
+                                                className="text-gray-500 hover:text-gray-900 dark:hover:text-white transition-colors"
                                                 aria-label={`${member.name}'s ${platform}`}
                                             >
                                                 {/* Simple icons based on platform name - for production usually use an icon library */}

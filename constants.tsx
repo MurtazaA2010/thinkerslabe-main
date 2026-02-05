@@ -33,10 +33,10 @@ export const BLOGS: BlogPost[] = [
     content: `
       <p class="mb-6">The classroom of 2030 won't clearly distinguish between "online" and "offline" learning. Instead, AI will serve as an invisible layer of intelligence that supports both teachers and students in real-time.</p>
       
-      <h3 class="text-2xl font-bold text-white mb-4">Personalized Learning at Scale</h3>
+      <h3 class="text-2xl font-bold text-gray-900 dark:text-white mb-4">Personalized Learning at Scale</h3>
       <p class="mb-6">One of the biggest promises of AI in education is true personalization. Algorithms can now analyze a student's learning patterns, identify gaps in understanding, and adapt the curriculum accordingly. This isn't just about faster learning—it's about deeper mastery.</p>
       
-      <h3 class="text-2xl font-bold text-white mb-4">The Teacher's Co-Pilot</h3>
+      <h3 class="text-2xl font-bold text-gray-900 dark:text-white mb-4">The Teacher's Co-Pilot</h3>
       <p class="mb-6">Far from replacing teachers, AI tools act as powerful assistants. They can handle administrative tasks, grade assessments, and even suggest lesson plan modifications based on class performance data, freeing up educators to do what they do best: inspire and mentor.</p>
       
       <p>As we move forward, the question isn't whether AI should be in the classroom, but how we can design these tools to be ethical, effective, and conducive to critical thinking.</p>
@@ -53,7 +53,7 @@ export const BLOGS: BlogPost[] = [
     content: `
       <p class="mb-6">Dark matter makes up about 85% of the matter in the universe, yet it remains invisible to our telescopes. Traditional methods of detecting it rely on observing gravitational effects, but these are often subtle and hard to interpret.</p>
       
-      <h3 class="text-2xl font-bold text-white mb-4">Neural Networks to the Rescue</h3>
+      <h3 class="text-2xl font-bold text-gray-900 dark:text-white mb-4">Neural Networks to the Rescue</h3>
       <p class="mb-6">Recent breakthroughs involve training neural networks on massive simulations of cosmic evolution. These AI models learn to recognize the "fingerprints" of dark matter in the distribution of galaxies and gas clouds.</p>
       
       <p class="mb-6">By applying these trained models to actual telescope data, researchers are visualizing the cosmic web with unprecedented clarity. This allows consumers and enthusiasts to see meaningful representations of the invisible forces shaping our universe.</p>

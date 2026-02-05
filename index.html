@@ -1,60 +1,133 @@
-
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ThinkersLabe | AI for Everyone</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        dark: '#000000', // Darker background
+                    }
+                }
+            }
+        }
+    </script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Outfit:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Outfit:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
     <style>
+        :root {
+            --bg-primary: #ffffff;
+            --text-primary: #111827;
+            --text-secondary: #4b5563;
+        }
+
+        .dark {
+            --bg-primary: #000000;
+            --text-primary: #f9fafb;
+            --text-secondary: #9ca3af;
+        }
+
         body {
             font-family: 'Inter', sans-serif;
-            background-color: #030712;
-            color: #f9fafb;
+            background-color: var(--bg-primary);
+            color: var(--text-primary);
             scroll-behavior: smooth;
         }
-        h1, h2, h3, h4, .font-display {
+
+        h1,
+        h2,
+        h3,
+        h4,
+        .font-display {
             font-family: 'Outfit', sans-serif;
         }
+
         .mesh-gradient {
-            background-image: 
-                radial-gradient(at 0% 0%, rgba(59, 130, 246, 0.15) 0, transparent 50%), 
+            background-color: var(--bg-primary);
+            background-image:
+                radial-gradient(at 0% 0%, rgba(59, 130, 246, 0.1) 0, transparent 50%),
+                radial-gradient(at 100% 0%, rgba(147, 51, 234, 0.1) 0, transparent 50%),
+                radial-gradient(at 100% 100%, rgba(59, 130, 246, 0.05) 0, transparent 50%),
+                radial-gradient(at 0% 100%, rgba(147, 51, 234, 0.05) 0, transparent 50%);
+        }
+
+        .dark .mesh-gradient {
+            background-image:
+                radial-gradient(at 0% 0%, rgba(59, 130, 246, 0.15) 0, transparent 50%),
                 radial-gradient(at 100% 0%, rgba(147, 51, 234, 0.15) 0, transparent 50%),
                 radial-gradient(at 100% 100%, rgba(59, 130, 246, 0.1) 0, transparent 50%),
                 radial-gradient(at 0% 100%, rgba(147, 51, 234, 0.1) 0, transparent 50%);
         }
+
         .glass-card {
-            background: rgba(17, 24, 39, 0.7);
+            background: rgba(255, 255, 255, 0.7);
             backdrop-filter: blur(12px);
+            border: 1px solid rgba(0, 0, 0, 0.05);
+        }
+
+        .dark .glass-card {
+            background: rgba(17, 24, 39, 0.7);
             border: 1px solid rgba(255, 255, 255, 0.1);
         }
+
         .text-gradient {
-            background: linear-gradient(to right, #60a5fa, #a855f7);
+            background: linear-gradient(to right, #3b82f6, #9333ea);
             -webkit-background-clip: text;
+            background-clip: text;
             -webkit-text-fill-color: transparent;
         }
-        @keyframes blob {
-            0% { transform: translate(0px, 0px) scale(1); }
-            33% { transform: translate(30px, -50px) scale(1.1); }
-            66% { transform: translate(-20px, 20px) scale(0.9); }
-            100% { transform: translate(0px, 0px) scale(1); }
+
+        .dark .text-gradient {
+            background: linear-gradient(to right, #93c5fd, #d8b4fe);
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
         }
+
+        @keyframes blob {
+            0% {
+                transform: translate(0px, 0px) scale(1);
+            }
+
+            33% {
+                transform: translate(30px, -50px) scale(1.1);
+            }
+
+            66% {
+                transform: translate(-20px, 20px) scale(0.9);
+            }
+
+            100% {
+                transform: translate(0px, 0px) scale(1);
+            }
+        }
+
         .animate-blob {
             animation: blob 7s infinite;
         }
+
         .animation-delay-2000 {
             animation-delay: 2s;
         }
+
         .animation-delay-4000 {
             animation-delay: 4s;
         }
     </style>
 </head>
+
 <body class="mesh-gradient min-h-screen">
     <div id="root"></div>
     <script type="module" src="/index.tsx"></script>
 </body>
+
 </html>

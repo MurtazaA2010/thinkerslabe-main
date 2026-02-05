@@ -12,17 +12,17 @@ const TermsOfServices: React.FC = () => {
 
             <div className="max-w-4xl mx-auto px-6 py-12">
                 <div className="mb-12 text-center">
-                    <h1 className="text-4xl md:text-5xl font-bold mb-6 tracking-tight text-white">
+                    <h1 className="text-4xl md:text-5xl font-bold mb-6 tracking-tight text-gray-900 dark:text-white">
                         Terms of <span className="text-gradient">Services</span>
                     </h1>
-                    <p className="text-gray-400 text-lg">
+                    <p className="text-gray-600 dark:text-gray-400 text-lg">
                         Last updated: {new Date().toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' })}
                     </p>
                 </div>
 
-                <div className="glass-card rounded-3xl p-8 md:p-12 space-y-8 text-gray-300 leading-relaxed">
+                <div className="glass-card rounded-3xl p-8 md:p-12 space-y-8 text-gray-700 dark:text-gray-300 leading-relaxed">
                     <section>
-                        <h2 className="text-2xl font-bold text-white mb-4">1. Agreement to Terms</h2>
+                        <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-4">1. Agreement to Terms</h2>
                         <p>
                             By accessing our website and using our services, you agree to be bound by these Terms of Services.
                             If you do not agree to agree with any of these terms, you are prohibited from using or accessing this site.
@@ -30,7 +30,7 @@ const TermsOfServices: React.FC = () => {
                     </section>
 
                     <section>
-                        <h2 className="text-2xl font-bold text-white mb-4">2. Intellectual Property Rights</h2>
+                        <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-4">2. Intellectual Property Rights</h2>
                         <p>
                             Other than the content you own, under these Terms, ThinkersLabe and/or its licensors own all the intellectual property rights and materials contained in this Website.
                             You are granted limited license only for purposes of viewing the material contained on this Website.
@@ -38,7 +38,7 @@ const TermsOfServices: React.FC = () => {
                     </section>
 
                     <section>
-                        <h2 className="text-2xl font-bold text-white mb-4">3. Restrictions</h2>
+                        <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-4">3. Restrictions</h2>
                         <p>
                             You are specifically restricted from all of the following:
                         </p>
@@ -52,14 +52,14 @@ const TermsOfServices: React.FC = () => {
                     </section>
 
                     <section>
-                        <h2 className="text-2xl font-bold text-white mb-4">4. Limitation of Liability</h2>
+                        <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-4">4. Limitation of Liability</h2>
                         <p>
                             In no event shall ThinkersLabe, nor any of its officers, directors and employees, be held liable for anything arising out of or in any way connected with your use of this Website whether such liability is under contract.  ThinkersLabe, including its officers, directors and employees shall not be held liable for any indirect, consequential or special liability arising out of or in any way related to your use of this Website.
                         </p>
                     </section>
 
                     <section>
-                        <h2 className="text-2xl font-bold text-white mb-4">5. Governing Law</h2>
+                        <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-4">5. Governing Law</h2>
                         <p>
                             These Terms will be governed by and interpreted in accordance with the laws of the State, and you submit to the non-exclusive jurisdiction of the state and federal courts located in for the resolution of any disputes.
                         </p>

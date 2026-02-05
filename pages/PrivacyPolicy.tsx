@@ -12,17 +12,17 @@ const PrivacyPolicy: React.FC = () => {
 
             <div className="max-w-4xl mx-auto px-6 py-12">
                 <div className="mb-12 text-center">
-                    <h1 className="text-4xl md:text-5xl font-bold mb-6 tracking-tight text-white">
+                    <h1 className="text-4xl md:text-5xl font-bold mb-6 tracking-tight text-gray-900 dark:text-white">
                         Privacy <span className="text-gradient">Policy</span>
                     </h1>
-                    <p className="text-gray-400 text-lg">
+                    <p className="text-gray-600 dark:text-gray-400 text-lg">
                         Last updated: {new Date().toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' })}
                     </p>
                 </div>
 
-                <div className="glass-card rounded-3xl p-8 md:p-12 space-y-8 text-gray-300 leading-relaxed">
+                <div className="glass-card rounded-3xl p-8 md:p-12 space-y-8 text-gray-700 dark:text-gray-300 leading-relaxed">
                     <section>
-                        <h2 className="text-2xl font-bold text-white mb-4">1. Introduction</h2>
+                        <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-4">1. Introduction</h2>
                         <p>
                             Welcome to ThinkersLabe. We respect your privacy and are committed to protecting your personal data.
                             This privacy policy will inform you as to how we look after your personal data when you visit our website
@@ -31,7 +31,7 @@ const PrivacyPolicy: React.FC = () => {
                     </section>
 
                     <section>
-                        <h2 className="text-2xl font-bold text-white mb-4">2. Data We Collect</h2>
+                        <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-4">2. Data We Collect</h2>
                         <p>
                             We may collect, use, store and transfer different kinds of personal data about you which we have grouped together follows:
                         </p>
@@ -44,7 +44,7 @@ const PrivacyPolicy: React.FC = () => {
                     </section>
 
                     <section>
-                        <h2 className="text-2xl font-bold text-white mb-4">3. How We Use Your Data</h2>
+                        <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-4">3. How We Use Your Data</h2>
                         <p>
                             We will only use your personal data when the law allows us to. Most commonly, we will use your personal data in the following circumstances:
                         </p>
@@ -56,17 +56,17 @@ const PrivacyPolicy: React.FC = () => {
                     </section>
 
                     <section>
-                        <h2 className="text-2xl font-bold text-white mb-4">4. Data Security</h2>
+                        <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-4">4. Data Security</h2>
                         <p>
                             We have put in place appropriate security measures to prevent your personal data from being accidentally lost, used or accessed in an unauthorised way, altered or disclosed. In addition, we limit access to your personal data to those employees, agents, contractors and other third parties who have a business need to know.
                         </p>
                     </section>
 
                     <section>
-                        <h2 className="text-2xl font-bold text-white mb-4">5. Contact Us</h2>
+                        <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-4">5. Contact Us</h2>
                         <p>
                             If you have any questions about this privacy policy or our privacy practices, please contact us at:
-                            <a href="mailto:support@thinkerslabe.com" className="text-blue-400 hover:text-blue-300 ml-1 transition-colors">support@thinkerslabe.com</a>
+                            <a href="mailto:support@thinkerslabe.com" className="text-blue-600 dark:text-blue-400 hover:text-blue-500 dark:hover:text-blue-300 ml-1 transition-colors">support@thinkerslabe.com</a>
                         </p>
                     </section>
                 </div>
