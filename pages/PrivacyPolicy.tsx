@@ -66,7 +66,11 @@ const PrivacyPolicy: React.FC = () => {
                         <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-4">5. Contact Us</h2>
                         <p>
                             If you have any questions about this privacy policy or our privacy practices, please contact us at:
+<<<<<<< HEAD
                             <a href="mailto:murtazaabdullah989@gmail.com" className="text-blue-600 dark:text-blue-400 hover:text-blue-500 dark:hover:text-blue-300 ml-1 transition-colors">murtazaabdullah989@gmail.com</a>
+=======
+                            <a href="mailto:support@thinkerslabe.com" className="text-blue-600 dark:text-blue-400 hover:text-blue-500 dark:hover:text-blue-300 ml-1 transition-colors">support@thinkerslabe.com</a>
+>>>>>>> cb9fd4909cfe9cbd43d1ae81109b7521fd48afd8
                         </p>
                     </section>
                 </div>

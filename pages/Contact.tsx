@@ -58,7 +58,11 @@ const Contact: React.FC = () => {
               </div>
               <div>
                 <h4 className="text-gray-900 dark:text-white font-bold mb-1">Email Us</h4>
+<<<<<<< HEAD
                 <p className="text-gray-600 dark:text-gray-400">murtazaabdullah989@gmail.com</p>
+=======
+                <p className="text-gray-600 dark:text-gray-400">hello@thinkerslabe.ai</p>
+>>>>>>> cb9fd4909cfe9cbd43d1ae81109b7521fd48afd8
               </div>
             </div>
 
@@ -68,7 +72,11 @@ const Contact: React.FC = () => {
               </div>
               <div>
                 <h4 className="text-gray-900 dark:text-white font-bold mb-1">Our HQ</h4>
+<<<<<<< HEAD
                 <p className="text-gray-600 dark:text-gray-400">Dhaka, Bangladesh</p>
+=======
+                <p className="text-gray-600 dark:text-gray-400">Dhaka<br />Bangladesh</p>
+>>>>>>> cb9fd4909cfe9cbd43d1ae81109b7521fd48afd8
               </div>
             </div>
           </div>

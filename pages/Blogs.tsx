@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 /*
+=======
+
+>>>>>>> cb9fd4909cfe9cbd43d1ae81109b7521fd48afd8
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { BLOGS } from '../constants';
@@ -47,7 +51,11 @@ const Blogs: React.FC = () => {
         ))}
       </div>
 
+<<<<<<< HEAD
       {/* Featured Newsletter 
+=======
+      {/* Featured Newsletter */}
+>>>>>>> cb9fd4909cfe9cbd43d1ae81109b7521fd48afd8
       <div className="mt-20 glass-card p-10 md:p-16 rounded-[40px] flex flex-col md:flex-row items-center justify-between gap-10">
         <div className="md:max-w-xl">
           <h2 className="text-3xl font-bold mb-4 text-gray-900 dark:text-white">Stay Curiously Ahead</h2>
@@ -66,4 +74,7 @@ const Blogs: React.FC = () => {
 };
 
 export default Blogs;
+<<<<<<< HEAD
 */
+=======
+>>>>>>> cb9fd4909cfe9cbd43d1ae81109b7521fd48afd8

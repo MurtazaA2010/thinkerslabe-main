@@ -5,6 +5,10 @@ import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 import Home from './pages/Home';
 import Products from './pages/Products';
+<<<<<<< HEAD
+=======
+import Blogs from './pages/Blogs';
+>>>>>>> cb9fd4909cfe9cbd43d1ae81109b7521fd48afd8
 import Contact from './pages/Contact';
 import PrivacyPolicy from './pages/PrivacyPolicy';
 import TermsOfServices from './pages/TermsOfServices';
@@ -24,7 +28,11 @@ const App: React.FC = () => {
               <Route path="/" element={<Home />} />
               <Route path="/about" element={<About />} />
               <Route path="/products" element={<Products />} />
+<<<<<<< HEAD
               {/*<Route path="/blogs" element={<Blogs />} />*/}
+=======
+              <Route path="/blogs" element={<Blogs />} />
+>>>>>>> cb9fd4909cfe9cbd43d1ae81109b7521fd48afd8
               <Route path="/blogs/:id" element={<BlogDetails />} />
               <Route path="/contact" element={<Contact />} />
               <Route path="/privacy-policy" element={<PrivacyPolicy />} />
