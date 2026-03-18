@@ -26,7 +26,7 @@ const About: React.FC = () => {
                             that don't just answer questions, but inspire new ones.
                         </p>
                         <p>
-                            Our team consists of engineers, scientists, and designers who believe that Artificial Intelligence should be an
+                            Our team believe that Artificial Intelligence should be an
                             extension of the human mind—a bicycle for the intellect that helps you pedal faster toward discovery.
                             From simulating galaxy formations in a browser to personalized tutoring that adapts to your curiosity,
                             ThinkersLabe is engineering the future of thought.

@@ -5,7 +5,6 @@ export const NAV_ITEMS: NavItem[] = [
   { label: 'Home', path: '/' },
   { label: 'About', path: '/about' },
   { label: 'Products', path: '/products' },
-  { label: 'Blogs', path: '/blogs' },
   { label: 'Contact', path: '/contact' },
 ];
 
@@ -17,7 +16,7 @@ export const PRODUCTS: Product[] = [
     category: 'Education',
     image: 'phiai.png',
     features: ['Prompt to Animation', 'Mathematical Equations', 'Mathematical Formulas'],
-    link: "http://youtube.com"
+    link: "https://phi.thinkerslabe.com"
   }
 ];
 
@@ -89,35 +88,13 @@ export const MEMBERS: Member[] = [
   {
     id: '1',
     name: 'Murtaza Abdullah',
-    role: 'Founder & Lead Engineer',
-    bio: 'Visionary technologist passionate about bridging the gap between artificial intelligence and human education. Leading the charge at ThinkersLabe to make science accessible to all.',
-    image: 'https://picsum.photos/seed/murtaza/400/400',
+    role: 'Founder & CEO',
+    bio: 'A high-school programmer and technologist',
+    image: 'https://media.licdn.com/dms/image/v2/D5603AQG3sIp-zuGmVQ/profile-displayphoto-scale_200_200/B56ZvHM_MIKwAY-/0/1768573659842?e=1775692800&v=beta&t=HuTMb6vPwdfKOsAEUjZIX40hkbE7kIl6ssTMtaifhuM',
     socials: {
-      linkedin: '#',
-      twitter: '#',
-      github: '#'
-    }
-  },
-  {
-    id: '2',
-    name: 'Elena Rodriguez',
-    role: 'Head of Research',
-    bio: 'Former astrophysics researcher turned AI specialist. Elena ensures that all our scientific tools retain rigorous accuracy while being intuitive for students.',
-    image: 'https://picsum.photos/seed/elena/400/400',
-    socials: {
-      linkedin: '#',
-      twitter: '#'
-    }
-  },
-  {
-    id: '3',
-    name: 'David Chen',
-    role: 'Product Designer',
-    bio: 'Believes that good design is invisible. David crafts the seamless user experiences that make complex AI tools feel like magic.',
-    image: 'https://picsum.photos/seed/david/400/400',
-    socials: {
-      linkedin: '#',
-      github: '#'
+      linkedin: 'https://www.linkedin.com/in/murtaza-abdullah2010/',
+      twitter: 'https://x.com/MurtazaAbd23926',
+      github: 'https://github.com/MurtazaA2010'
     }
   }
 ];
