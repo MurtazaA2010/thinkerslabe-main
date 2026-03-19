@@ -18,7 +18,7 @@ const Navbar: React.FC = () => {
                 If it's white text, we need to invert it in light mode.
             */}
           <img
-            src="../public/logo-main.png"
+            src="/logo-main.png"
             alt="ThinkersLabe"
             width={250}
             height={150}
