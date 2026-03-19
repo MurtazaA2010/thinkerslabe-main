@@ -68,7 +68,7 @@ const Footer: React.FC = () => {
 
       {/* Footer Bottom */}
       <div className="max-w-7xl mx-auto mt-16 pt-8 border-t border-gray-200 dark:border-white/5 text-center text-sm text-gray-500">
-        <p>&copy; {new Date().getFullYear()} ThinkersLabe AI. Empowering the future of learning.</p>
+        <p>&copy; {new Date().getFullYear()} ThinkersLabe. Empowering the future of learning.</p>
       </div>
     </footer>
   );
