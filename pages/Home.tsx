@@ -68,7 +68,7 @@ const Home: React.FC = () => {
                   {product.description}
                 </p>
                 <div className="w-full h-[1px] bg-gray-200 dark:bg-gray-500 mt-4 mb-4"></div>
-                <Link to={`/products/${product.id}`} className="text-blue-600 dark:text-white hover:text-blue-700 dark:hover:text-white/80 hover:opacity-80 font-medium">
+                <Link to={`/products/${product.link}`} className="text-blue-600 dark:text-white hover:text-blue-700 dark:hover:text-white/80 hover:opacity-80 font-medium">
                   Try It Free
                 </Link>
               </div>
