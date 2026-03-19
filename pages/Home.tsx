@@ -33,8 +33,8 @@ const Home: React.FC = () => {
             <Link to="/products" className="w-full sm:w-auto px-8 py-4 bg-blue-600 hover:bg-blue-700 text-white font-bold rounded-xl transition-all shadow-xl shadow-blue-600/25">
               Explore Products
             </Link>
-            <Link to="/blogs" className="w-full sm:w-auto px-8 py-4 bg-gray-100 hover:bg-gray-200 dark:bg-white/5 dark:hover:bg-white/10 text-gray-900 dark:text-white border border-gray-200 dark:border-white/10 font-bold rounded-xl transition-all">
-              Read Our Stories
+            <Link to="/about" className="w-full sm:w-auto px-8 py-4 bg-gray-100 hover:bg-gray-200 dark:bg-white/5 dark:hover:bg-white/10 text-gray-900 dark:text-white border border-gray-200 dark:border-white/10 font-bold rounded-xl transition-all">
+              Our Story
             </Link>
           </div>
         </div>
